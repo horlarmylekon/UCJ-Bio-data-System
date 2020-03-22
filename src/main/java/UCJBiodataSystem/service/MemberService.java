@@ -60,6 +60,8 @@ public class MemberService {
                 newEntity.setLpo(entity.getLpo());
                 newEntity.setHallOfRecidence(entity.getHallOfRecidence());
                 newEntity.setYearOfInduction(entity.getYearOfInduction());
+                newEntity.setGender(entity.getGender());
+                newEntity.setDateOfBirth(entity.getDateOfBirth());
 
                 newEntity = memberRepository.save(newEntity);
 

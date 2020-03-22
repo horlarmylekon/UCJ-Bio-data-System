@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:include="fragments/header :: head"> </th:block>
+</head>
+
+<body>
+<div class="container my-5">
+
+    <br>
+    <nav>  <th:block th:replace="fragments/nav :: nav"></th:block>   </nav>
+    <br>
+
+    <h3> ABOUT US</h3>
+
+    <p>The Union of Campus Journalists has been in existence since 1987. A student controlled organisation fully registered
+        by the Students’ Affairs Division University of Ibadan (U.I.) It is the chief media entity and umbrella body of press
+        organizations registered with the union in the University of Ibadan and the University College Hospital (UCH) Ibadan.
+        Affiliated to it are independent press clubs, with membership strength of over 3000 students.</p>
+
+    <p>The union is committed to improving the standards of campus journalism with a view to ensuring its parity with
+        mainstream journalism. It was fashioned after the Nigerian Union of Journalists (NUJ) which is the professional body
+        of “penpushers”. Just like NUJ, UCJ caters for the interest of Campus Journalists and promotes other intellectual
+        activities on campus. The union is committed to entrenching intellectualism as a core idea of student.</p>
+
+    <h3>ADDRESS</h3>
+
+    <p>
+        <i class="fas fa-map-marker-alt"></i> Suite 14, Students’ Union Building (SUB), University of Ibadan.
+    </p>
+
+    <h3>CONTACT</h3>
+    <p>
+       <i class="fas fa-phone-volume"></i> 08027887184|09061949587</p>
+
+
+    <footer>
+        <th:block th:include="fragments/footer :: footer"></th:block>
+    </footer>
+</div>
+</body>
+
+</html>

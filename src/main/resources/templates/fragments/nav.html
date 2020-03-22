@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" xmlns:th="http://www.thymeleaf.org">
 
-    <a class="navbar-brand" href="#">UCJ Bio-data System</a>
+    <a class="navbar-brand" href="#">UCJ-UI Bio-data System</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,7 +10,10 @@
                 <a class="nav-link" th:href="@{/}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item right">
-                <a class="nav-link navbar-nav justify-content-end" href="#" tabindex="-1" aria-disabled="true">About</a>
+                <a class="nav-link navbar-nav justify-content-end" th:href="@{/all}" tabindex="-1" aria-disabled="true">Bio-data</a>
+            </li>
+            <li class="nav-item right">
+                <a class="nav-link navbar-nav justify-content-end" th:href="@{/about}" tabindex="-1" aria-disabled="true">About</a>
             </li>
         </ul>
         <ul class="nav navbar-nav" style="color: #ffffff">Logout</ul>

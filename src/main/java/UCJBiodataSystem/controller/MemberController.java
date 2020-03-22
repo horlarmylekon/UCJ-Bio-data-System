@@ -21,9 +21,14 @@ public class MemberController {
     @Autowired
     MemberService memberService;
 
-    @GetMapping("/test")
+    @GetMapping("")
     public String home(){
         return "index";
+    }
+
+    @GetMapping("/about")
+    public String aboutPage(){
+        return "about";
     }
 
     @RequestMapping(path = "/all", method = RequestMethod.GET)
