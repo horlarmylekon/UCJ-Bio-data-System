@@ -1,4 +1,4 @@
-package The.UCJ.Biodata.System.is.a.web.application.that.keeps.records.of.members.of.the.Union.of.Campus.Journalists.University.of.Ibadan.Chapter;
+package UCJBiodataSystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
