@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:include="fragments/header :: head"> </th:block>
+</head>
+
+<body>
+<div class="container my-5">
+
+    <br>
+    <nav>  <th:block th:replace="fragments/nav :: nav"></th:block>   </nav>
+    <br>
+
+    <h3> Add Member</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="col-md-10">
+                <form action="#" th:action="@{/createMember}" th:object="${member}" method="post">
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <label for="firstName" class="col-form-label">First Name</label>
+                            <input type="text" th:field="*{firstName}" class="form-control"
+                                   id="firstName" placeholder="First Name" />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="lastName" class="col-form-label">Last Name</label>
+                            <input type="text" th:field="*{lastName}" class="form-control"
+                                   id="lastName" placeholder="Last Name" />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="email" class="col-form-label">Email</label>
+                            <input type="email" th:field="*{email}" class="form-control"
+                                   id="email" placeholder="Email Address" />
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="department" class="col-form-label">Department</label>
+                            <input type="text" th:field="*{department}" class="form-control"
+                                   id="department" placeholder="Department" />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="hall" class="col-form-label">Hall of Residence</label>
+                            <input type="text" th:field="*{hallOfRecidence}" class="form-control"
+                                   id="hall" placeholder="Hall of Residence" />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="lpo" class="col-form-label">Local Press Organisation</label>
+                            <input type="text" th:field="*{lpo}" class="form-control"
+                                   id="lpo" placeholder="Local Press Organization" />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="year" class="col-form-label">Year of induction</label>
+                            <input type="date" th:field="*{yearOfInduction}" class="form-control"
+                                   id="year" placeholder="Year of Induction" />
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <input type="submit" class="btn btn-primary" value=" Submit ">
+                        </div>
+
+                        <input type="hidden" id="id" th:field="*{id}">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <th:block th:include="fragments/footer :: footer"></th:block>
+    </footer>
+</div>
+</body>
+
+</html>
