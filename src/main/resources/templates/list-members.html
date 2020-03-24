@@ -16,7 +16,7 @@
         <div class="card-body">
             <div th:switch="${members}" class="container my-5">
                 <p class="my-5">
-                    <a href="/edit" class="btn btn-primary">
+                    <a th:href="@{/data/edit}" class="btn btn-primary">
                         <i class="fas fa-user-plus ml-2"> Add Member </i></a>
                 </p>
                 <div class="col-md-12">
@@ -41,13 +41,13 @@
                                 <td th:text="${member.hallOfRecidence}"></td>
                                 <td th:text="${member.lpo}"></td>
                                 <td>
-                                    <a th:href="@{/edit/{id}(id=${member.id})}" class="btn btn-primary">
+                                    <a th:href="@{/data/edit/{id}(id=${member.id})}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit Member">
                                         <i class="fas fa-user-edit ml-2"></i>
                                     </a>
-                                    <a href="#" class="btn btn-succes">
+                                    <a th:href="@{/data/detail/{id}(id=${member.id})}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="View Member">
                                         <i class="fas fa-user-check ml-2"></i>
                                     </a>
-                                    <a th:href="@{/delete/{id}(id=${member.id})}" class="btn btn-danger">
+                                    <a th:href="@{/data/delete/{id}(id=${member.id})}" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete Member">
                                         <i class="fas fa-user-times ml-2"></i>
                                     </a>
                                 </td>
@@ -58,6 +58,7 @@
 
                 </div>
             </div>
+
         </div>
     </div>
 

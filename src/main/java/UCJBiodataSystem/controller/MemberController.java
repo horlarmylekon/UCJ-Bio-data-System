@@ -15,27 +15,18 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/data")
 public class MemberController {
 
     @Autowired
     MemberService memberService;
 
-    @GetMapping("")
-    public String home(){
-        return "index";
-    }
 
-    @GetMapping("/about")
-    public String aboutPage(){
-        return "about";
-    }
 
     @RequestMapping(path = "/all", method = RequestMethod.GET)
     public String getAllMembers(Model model)
     {
         List<Member> memberList = memberService.getAllMembers();
-
         model.addAttribute("members", memberList);
         return "list-members";
     }
@@ -53,18 +44,31 @@ public class MemberController {
         return "add-edit-member";
     }
 
+    @RequestMapping(path = {"/detail", "/detail/{id}"}, method = RequestMethod.GET)
+    public String detailMemberById(Model model, @PathVariable("id") Optional<Long> id)
+            throws RecordNotFoundException
+    {
+        if (id.isPresent()) {
+            Member entity = memberService.getMemberById(id.get());
+            model.addAttribute("member", entity);
+        } else {
+            model.addAttribute("member", new Member());
+        }
+        return "detail-member";
+    }
+
     @RequestMapping(path = "/delete/{id}")
     public String deleteMemberById(Model model, @PathVariable("id") Long id)
             throws RecordNotFoundException
     {
         memberService.deleteMemberById(id);
-        return "redirect:/";
+        return "redirect:/all";
     }
 
     @RequestMapping(path = "/createMember", method = RequestMethod.POST)
     public String createOrUpdateEmployee(Member member)
     {
         memberService.createOrUpdateMember(member);
-        return "redirect:/all";
+        return "redirect:/data/all";
     }
 }
