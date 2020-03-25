@@ -60,8 +60,20 @@
                         </div>
                         <div class="form-group col-md-8">
                             <label for="hall" class="col-form-label">Hall of Residence</label>
-                            <input type="text" th:field="*{hallOfRecidence}" class="form-control"
-                                   id="hall" placeholder="Hall of Residence" required/>
+                            <select  class="form-control" id="hall" th:field="*{hallOfRecidence}" required>
+                                <option th:value="'Abdulsalami Abubakar Hall'" th:text="'Abdulsalami Abubakar Hall'"></option>
+                                <option th:value="'Alexandar Brown Hall'" th:text="'Alexandar Brown Hall'"></option>
+                                <option th:value="'Independence Hall'" th:text="'Independence Hall'"></option>
+                                <option th:value="'Kenneth Mellandy Hall'" th:text="'Kenneth Mellandy Hall'"></option>
+                                <option th:value="'Kuti Hall'" th:text="'Kuti Hall'"></option>
+                                <option th:value="'Nnamdi Azikwe Hall'" th:text="'Nnamdi Azikwe Hall'"></option>
+                                <option th:value="'Obafemi Awolowo Hall'" th:text="'Obafemi Awolowo Hall'"></option>
+                                <option th:value="'Queen Elizabeth Hall'" th:text="'Queen Elizabeth Hall'"></option>
+                                <option th:value="'Queen Idia Hall'" th:text="'Queen Idia Hall'"></option>
+                                <option th:value="'Sultan Bello Hall'" th:text="'Sultan Bello Hall'"></option>
+                                <option th:value="'Tafawa Balewa Hall'" th:text="'Tafawa Balewa Hall'"></option>
+                                <option th:value="'Tedder Hall'" th:text="'Tedder Hall'"></option>
+                            </select>
                         </div>
                         <div class="form-group col-md-8">
                             <label for="lpo" class="col-form-label">Local Press Organisation</label>
