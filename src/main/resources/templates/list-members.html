@@ -2,7 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
+
+    <title>UCJ-UI Bio-data &dash; ALL MEMBERS</title>
     <th:block th:include="fragments/header :: head"> </th:block>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+
 </head>
 
 <body>
@@ -11,6 +15,7 @@
     <br>
     <nav>  <th:block th:replace="fragments/nav :: nav"></th:block>   </nav>
     <br>
+
 
     <div class="card">
         <div class="card-body">
@@ -41,14 +46,14 @@
                                 <td th:text="${member.hallOfRecidence}"></td>
                                 <td th:text="${member.lpo}"></td>
                                 <td>
-                                    <a th:href="@{/data/edit/{id}(id=${member.id})}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Edit Member">
-                                        <i class="fas fa-user-edit ml-2"></i>
+                                    <a th:href="@{/data/edit/{id}(id=${member.id})}" data-toggle="tooltip" data-placement="top" title="Edit Member">
+                                        <i class="fas fa-edit ml-2"></i>
                                     </a>
-                                    <a th:href="@{/data/detail/{id}(id=${member.id})}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="View Member">
+                                    <a th:href="@{/data/detail/{id}(id=${member.id})}" data-toggle="tooltip" data-placement="top" title="View Member">
                                         <i class="fas fa-user-check ml-2"></i>
                                     </a>
-                                    <a th:href="@{/data/delete/{id}(id=${member.id})}" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete Member">
-                                        <i class="fas fa-user-times ml-2"></i>
+                                    <a  th:href="@{/data/delete/{id}(id=${member.id})}" class="del" data-toggle="tooltip" data-placement="top" title="Delete Member">
+                                        <i class="fas fa-trash-alt ml-2" style="color: red"></i>
                                     </a>
                                 </td>
                             </tr>
@@ -66,7 +71,18 @@
         <th:block th:include="fragments/footer :: footer"></th:block>
     </footer>
 
+
+
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+<script>
+    $('.del').confirm(function () {
+
+    });
+
+</script>
 </body>
 
 </html>

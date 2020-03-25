@@ -62,7 +62,7 @@ public class MemberController {
             throws RecordNotFoundException
     {
         memberService.deleteMemberById(id);
-        return "redirect:/all";
+        return "redirect:/data/all";
     }
 
     @RequestMapping(path = "/createMember", method = RequestMethod.POST)

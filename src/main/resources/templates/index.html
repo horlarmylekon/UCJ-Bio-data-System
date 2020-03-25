@@ -2,11 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
+
+    <title>UCJ-UI Bio-data &dash; HOME</title>
     <th:block th:include="fragments/header :: head"> </th:block>
 
     <style>
         img{
-            width: 400px;
+            width: 100%;
             height: 100%;
         }
     </style>
@@ -30,13 +32,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" th:src="@{~/images/gate.jpg}" alt="First slide">
+                    <img class="d-block " th:src="@{~/images/gate.jpg}" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" th:src="@{~/images/gate.jpg}" alt="Second slide">
+                    <img class="d-block " th:src="@{~/images/gate.jpg}" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" th:src="@{~/images/gate.jpg}" alt="Third slide">
+                    <img class="d-block" th:src="@{~/images/gate.jpg}" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

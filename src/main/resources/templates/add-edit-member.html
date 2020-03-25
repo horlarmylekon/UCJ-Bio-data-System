@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
+    <title>UCJ-UI Bio-data &dash; ADD MEMBER</title>
     <th:block th:include="fragments/header :: head"> </th:block>
 </head>
 
@@ -21,16 +22,16 @@
                         <div class="form-group col-md-8">
                             <label for="firstName" class="col-form-label">First Name</label>
                             <input type="text" th:field="*{firstName}" class="form-control"
-                                   id="firstName" placeholder="First Name" />
+                                   id="firstName" placeholder="First Name" required/>
                         </div>
                         <div class="form-group col-md-8">
                             <label for="lastName" class="col-form-label">Last Name</label>
                             <input type="text" th:field="*{lastName}" class="form-control"
-                                   id="lastName" placeholder="Last Name" />
+                                   id="lastName" placeholder="Last Name" required/>
                         </div>
                         <div class="form-group col-md-8">
                             <label for="gender" class="col-form-label">Gender</label>
-                            <select  class="form-control" id="gender" th:field="*{gender}">
+                            <select  class="form-control" id="gender" th:field="*{gender}" required>
                                 <option th:value="'F'" th:text="Female"></option>
                                 <option th:value="'M'" th:text="Male"></option>
                             </select>
@@ -38,27 +39,33 @@
                         <div class="form-group col-md-8">
                             <label for="dob" class="col-form-label">Date of Birth</label>
                             <input type="date" th:field="*{dateOfBirth}" class="form-control"
-                                   id="dob" placeholder="Date of Birth" />
+                                   id="dob" placeholder="Date of Birth" required/>
                         </div>
                         <div class="form-group col-md-8">
                             <label for="email" class="col-form-label">Email</label>
                             <input type="email" th:field="*{email}" class="form-control"
-                                   id="email" placeholder="Email Address" />
+                                   id="email" placeholder="Email Address" required/>
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="phoneNumber" class="col-form-label">Phone Number</label>
+                            <input type="tel" th:field="*{phoneNumber}" class="form-control"
+                                   id="phoneNumber" maxlength="11" placeholder="Phone Number" required/>
                         </div>
 
                         <div class="form-group col-md-8">
                             <label for="department" class="col-form-label">Department</label>
-                            <input type="text" th:field="*{department}" class="form-control"
-                                   id="department" placeholder="Department" />
+                            <input type="tel" th:field="*{department}" class="form-control"
+                                   id="department" placeholder="Department" required/>
                         </div>
                         <div class="form-group col-md-8">
                             <label for="hall" class="col-form-label">Hall of Residence</label>
                             <input type="text" th:field="*{hallOfRecidence}" class="form-control"
-                                   id="hall" placeholder="Hall of Residence" />
+                                   id="hall" placeholder="Hall of Residence" required/>
                         </div>
                         <div class="form-group col-md-8">
                             <label for="lpo" class="col-form-label">Local Press Organisation</label>
-                            <select  class="form-control" id="lpo" th:field="*{lpo}">
+                            <select  class="form-control" id="lpo" th:field="*{lpo}" required>
                                 <option th:value="'PRESS'" th:text="Press"></option>
                                 <option th:value="'READER'" th:text="Reader"></option>
                             </select>
@@ -66,7 +73,7 @@
                         <div class="form-group col-md-8">
                             <label for="year" class="col-form-label">Year of induction</label>
                             <input type="date" th:field="*{yearOfInduction}" class="form-control"
-                                   id="year" placeholder="Year of Induction" />
+                                   id="year" placeholder="Year of Induction" required/>
                         </div>
 
 

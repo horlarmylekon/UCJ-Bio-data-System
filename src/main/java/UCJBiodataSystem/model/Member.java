@@ -22,8 +22,11 @@ public class Member {
     @Column(name="date_of_birth")
     private String dateOfBirth;
 
-    @Column(name="email", nullable=false, length=200)
+    @Column(name="email", nullable=false, unique = true)
     private String email;
+
+    @Column(name="phone_number", nullable=false, unique = true)
+    private String phoneNumber;
 
     @Column(name = "department")
     private String department;
@@ -86,6 +89,14 @@ public class Member {
         this.email = email;
     }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getDepartment() {
         return department;
     }
@@ -127,6 +138,7 @@ public class Member {
                 ", gender='" + gender + '\'' +
                 ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 ", department='" + department + '\'' +
                 ", hallOfRecidence='" + hallOfRecidence + '\'' +
                 ", lpo='" + lpo + '\'' +

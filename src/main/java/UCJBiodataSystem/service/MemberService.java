@@ -54,6 +54,7 @@ public class MemberService {
             {
                 Member newEntity = member.get();
                 newEntity.setEmail(entity.getEmail());
+                newEntity.setPhoneNumber(entity.getPhoneNumber());
                 newEntity.setFirstName(entity.getFirstName());
                 newEntity.setLastName(entity.getLastName());
                 newEntity.setDepartment(entity.getDepartment());
