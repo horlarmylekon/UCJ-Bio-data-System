@@ -28,6 +28,9 @@ public class Member {
     @Column(name="phone_number", nullable=false, unique = true)
     private String phoneNumber;
 
+    @Column(name = "faculty")
+    private String faculty;
+
     @Column(name = "department")
     private String department;
 
@@ -39,7 +42,6 @@ public class Member {
 
     @Column(name = "year_of_induction")
     private String yearOfInduction;
-
 
     public Long getId() {
         return id;
@@ -97,6 +99,14 @@ public class Member {
         this.phoneNumber = phoneNumber;
     }
 
+    public String getFaculty() {
+        return faculty;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
+    }
+
     public String getDepartment() {
         return department;
     }
@@ -139,6 +149,7 @@ public class Member {
                 ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
+                ", faculty='" + faculty + '\'' +
                 ", department='" + department + '\'' +
                 ", hallOfRecidence='" + hallOfRecidence + '\'' +
                 ", lpo='" + lpo + '\'' +
